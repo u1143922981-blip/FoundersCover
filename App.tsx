@@ -19,7 +19,7 @@ const SEOManager: React.FC = () => {
 
   useEffect(() => {
     const metaDescriptions: Record<string, string> = {
-      '/': 'Deutschlands Experten für Startup-Versicherungen. D&O, IT-Haftpflicht und Cyber-Schutz in 20 Minuten klären.',
+      '/': 'Wir vergleichen über 100 Versicherer für dein Startup. D&O, Cyberversicherung & Haftpflicht für jede Phase – von Gründung bis Exit. Der Partner für Startup-Versicherungen.',
       '/termin': 'Buche deinen 20-minütigen Risiko-Check bei FoundersCover. Professionelle Beratung für Startups.',
       '/leistungen': 'Unsere Module: D&O, IT-Haftpflicht und Cyber Shield. Maßgeschneiderte Versicherungen für SaaS & E-Commerce.',
       '/phasen': 'Versicherungsschutz für jede Phase: Von Gründung bis Series B. Proaktives Risikomanagement für Startups.',
@@ -31,7 +31,7 @@ const SEOManager: React.FC = () => {
     };
 
     const titles: Record<string, string> = {
-      '/': 'FoundersCover | Startup Versicherung Experten Deutschland',
+      '/': 'FoundersCover | Der Startup-Versicherungsmakler für Deutschland',
       '/termin': 'Risiko-Check buchen | FoundersCover',
       '/leistungen': 'Versicherungs-Module für Startups | FoundersCover',
       '/phasen': 'Startup-Phasen & Schutz | FoundersCover',
