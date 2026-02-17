@@ -32,7 +32,7 @@ const CookieBanner: React.FC = () => {
                 <div className="text-sm text-slate-300">
                     <p>
                         <strong>Wir nutzen Cookies & Tracking</strong> (Google Analytics / GTM), um unsere Webseite für Startups zu verbessern.
-                        Rechtsgrundlage: Art. 6 Abs. 1 a) DSGVO. Sind Sie damit einverstanden?
+                        Rechtsgrundlage: Art. 6 Abs. 1 a) DSGVO. Bist du damit einverstanden?
                     </p>
                     <a href="/datenschutz" className="text-primary hover:underline text-xs mt-1 inline-block">
                         Datenschutzerklärung lesen
