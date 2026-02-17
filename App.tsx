@@ -12,6 +12,7 @@ import Impressum from './pages/Impressum';
 import Datenschutz from './pages/Datenschutz';
 import ArticleDetail from './pages/ArticleDetail';
 import ScrollToTop from './components/ScrollToTop';
+import CookieBanner from './components/CookieBanner';
 
 const SEOManager: React.FC = () => {
   const location = useLocation();
@@ -69,6 +70,7 @@ const App: React.FC = () => {
     <Router>
       <ScrollToTop />
       <SEOManager />
+      <CookieBanner />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/termin" element={<Termin />} />

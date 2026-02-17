@@ -130,6 +130,7 @@ export const Footer: React.FC = () => {
         <div className="flex gap-8">
           <Link to="/impressum">Impressum</Link>
           <Link to="/datenschutz">Datenschutz</Link>
+          <a href="https://www.versiflex.de/impressum" target="_blank" rel="noopener noreferrer">Erstinformation</a>
         </div>
       </div>
     </footer>

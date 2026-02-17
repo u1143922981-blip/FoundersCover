@@ -43,7 +43,14 @@ const Datenschutz: React.FC = () => {
 
                             <div>
                                 <h3 className="text-white font-semibold mb-1">Cookies</h3>
-                                <p className="text-sm">Wir setzen technisch notwendige Cookies ein, um die Funktion der Website zu gewährleisten. Sie können Cookies in Ihren Browser-Einstellungen verwalten.</p>
+                                <p className="text-sm">Wir setzen technisch notwendige Cookies ein. Zusätzlich nutzen wir (nach Einwilligung) Google Analytics und Google Tag Manager zur Reichweitenmessung.</p>
+                            </div>
+
+                            <div>
+                                <h3 className="text-white font-semibold mb-1">Google Analytics & Tag Manager</h3>
+                                <p className="text-sm">
+                                    Soweit Sie eingewilligt haben, nutzen wir Google Analytics 4 (Google Ireland Limited). Zweck: Analyse der Websitenutzung. Rechtsgrundlage: Art. 6 Abs. 1 a) DSGVO. Datenübermittlung in die USA ist möglich (EU-Standardvertragsklauseln). Speicherdauer: 2 bzw. 14 Monate. Sie können die Einwilligung jederzeit über unser Cookie-Banner widerrufen.
+                                </p>
                             </div>
 
                             <div>
