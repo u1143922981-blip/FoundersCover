@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Risikoanalyse {{startup_name}} - FoundersCover</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Sora:wght@400;600;700&display=swap');
+
+        :root {
+            /* Brand Colors */
+            --fc-bg: #000000;
+            --fc-surface: #161316;
+            --fc-primary: #12C9FF;
+            /* Cyan */
+            --fc-secondary: #FF9EF0;
+            /* Pink */
+            --fc-text-main: #FFFFFF;
+            --fc-text-muted: #94A3B8;
+            /* Slate-400 */
+            --fc-text-dark: #0F172A;
+            --fc-border: rgba(255, 255, 255, 0.08);
+
+            /* Glass Effect vars (simulated flat for print reliability or kept simple) */
+            --fc-card-bg: rgba(22, 19, 22, 0.6);
+            --fc-card-border: rgba(255, 255, 255, 0.08);
+
+            /* Typography */
+            --font-display: 'Sora', sans-serif;
+            --font-body: 'Inter', sans-serif;
+
+            /* Spacing */
+            --spacing-xs: 0.5rem;
+            /* 8px */
+            --spacing-sm: 1rem;
+            /* 16px */
+            --spacing-md: 1.5rem;
+            /* 24px */
+            --spacing-lg: 2rem;
+            /* 32px */
+            --spacing-xl: 3rem;
+            /* 48px */
+
+            /* Radius */
+            --radius-md: 12px;
+            --radius-lg: 20px;
+            --radius-xl: 24px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--fc-bg);
+            color: var(--fc-text-main);
+            font-family: var(--font-body);
+            font-size: 14px;
+            line-height: 1.5;
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        /* Page Layout for Screen & Print */
+        .page-container {
+            max-width: 210mm;
+            /* A4 Width */
+            margin: 0 auto;
+            padding: 40px;
+            /* Screen padding */
+            background: var(--fc-bg);
+            min-height: 297mm;
+            /* A4 Height */
+            position: relative;
+        }
+
+        /* --- HEADER --- */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--fc-border);
+            margin-bottom: 40px;
+        }
+
+        .header-right {
+            font-size: 10px;
+            color: var(--fc-text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            text-align: right;
+            max-width: 200px;
+            line-height: 1.4;
+        }
+
+        /* --- HERO --- */
+        #hero {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 99px;
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 16px;
+        }
+
+        .badge-pink {
+            background: rgba(255, 158, 240, 0.1);
+            color: var(--fc-secondary);
+            border: 1px solid rgba(255, 158, 240, 0.2);
+        }
+
+        .badge-cyan {
+            background: rgba(18, 201, 255, 0.1);
+            color: var(--fc-primary);
+            border: 1px solid rgba(18, 201, 255, 0.2);
+        }
+
+        h1.hero-title {
+            font-family: var(--font-display);
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            line-height: 1.2;
+        }
+
+        .hero-subline {
+            font-size: 14px;
+            color: var(--fc-text-muted);
+            margin-bottom: 16px;
+        }
+
+        .meta-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 11px;
+            color: var(--fc-text-muted);
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* --- CARDS & SECTIONS --- */
+        .section {
+            margin-bottom: 32px;
+            page-break-inside: avoid;
+        }
+
+        .card {
+            background: var(--fc-surface);
+            border: 1px solid var(--fc-border);
+            border-radius: var(--radius-lg);
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            /* Soft shadow, looks okay in print if high quality */
+        }
+
+        /* Intro Box */
+        .intro-box {
+            background: rgba(18, 201, 255, 0.03);
+            border: 1px solid rgba(18, 201, 255, 0.1);
+            text-align: center;
+            padding: 20px;
+            margin-bottom: 32px;
+            font-size: 13px;
+            color: var(--fc-text-muted);
+            border-radius: var(--radius-md);
+        }
+
+        /* Startup Snapshot */
+        .snapshot-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 32px;
+        }
+
+        .key-value-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .kv-item {
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid var(--fc-border);
+            padding-bottom: 8px;
+            font-size: 12px;
+        }
+
+        .kv-label {
+            color: var(--fc-text-muted);
+            font-weight: 500;
+        }
+
+        .kv-value {
+            color: var(--fc-text-main);
+            font-weight: 600;
+        }
+
+        .snapshot-summary h3 {
+            font-family: var(--font-display);
+            font-size: 14px;
+            color: var(--fc-primary);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .snapshot-summary p {
+            font-size: 13px;
+            color: var(--fc-text-muted);
+            line-height: 1.6;
+        }
+
+        /* Risk Canvas Grid */
+        .risk-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            /* 2 columns for print readability */
+            gap: 16px;
+        }
+
+        @media (min-width: 768px) {
+            .risk-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        .risk-tile {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--fc-border);
+            border-radius: var(--radius-md);
+            padding: 16px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .risk-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            /* Align top */
+            margin-bottom: 12px;
+        }
+
+        .risk-title {
+            font-family: var(--font-display);
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--fc-text-main);
+            max-width: 70%;
+        }
+
+        .risk-badge {
+            font-size: 9px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .risk-badge.low {
+            background: #333;
+            color: #aaa;
+        }
+
+        .risk-badge.medium {
+            background: rgba(18, 201, 255, 0.2);
+            color: var(--fc-primary);
+        }
+
+        .risk-badge.high {
+            background: rgba(255, 158, 240, 0.2);
+            color: var(--fc-secondary);
+        }
+
+        .risk-bullets {
+            list-style: none;
+            font-size: 11px;
+            color: var(--fc-text-muted);
+            margin-bottom: 12px;
+            flex-grow: 1;
+        }
+
+        .risk-bullets li {
+            margin-bottom: 4px;
+            padding-left: 10px;
+            position: relative;
+        }
+
+        .risk-bullets li::before {
+            content: "•";
+            color: var(--fc-primary);
+            position: absolute;
+            left: 0;
+        }
+
+        .risk-insurance {
+            border-top: 1px solid var(--fc-border);
+            padding-top: 8px;
+            font-size: 10px;
+            color: var(--fc-text-muted);
+        }
+
+        .risk-insurance span {
+            color: var(--fc-text-main);
+            font-weight: 600;
+        }
+
+        /* Recommended Products List */
+        .product-list {
+            list-style: none;
+        }
+
+        .product-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+            align-items: flex-start;
+        }
+
+        .check-icon {
+            color: var(--fc-primary);
+            /* Simple SVG embedded or standard character */
+            font-weight: bold;
+        }
+
+        .product-text strong {
+            color: var(--fc-text-main);
+            font-family: var(--font-display);
+            font-size: 13px;
+            display: block;
+            margin-bottom: 2px;
+        }
+
+        .product-text span {
+            font-size: 12px;
+            color: var(--fc-text-muted);
+        }
+
+        /* Top 3 Recommendations */
+        .top3-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 16px;
+        }
+
+        .top3-card {
+            background: var(--fc-surface);
+            border: 1px solid var(--fc-border);
+            border-radius: var(--radius-lg);
+            padding: 20px;
+            text-align: center;
+        }
+
+        .top3-card.must {
+            border-color: rgba(18, 201, 255, 0.3);
+            box-shadow: 0 0 15px rgba(18, 201, 255, 0.1);
+        }
+
+        .top3-title {
+            font-family: var(--font-display);
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .text-cyan {
+            color: var(--fc-primary);
+        }
+
+        .text-white {
+            color: var(--fc-text-main);
+        }
+
+        .text-muted {
+            color: var(--fc-text-muted);
+        }
+
+        .top3-bullets {
+            text-align: left;
+            font-size: 11px;
+            color: var(--fc-text-muted);
+            list-style: none;
+        }
+
+        .top3-bullets li {
+            margin-bottom: 6px;
+            padding-left: 12px;
+            position: relative;
+        }
+
+        .top3-bullets li::before {
+            content: "→";
+            color: var(--fc-border);
+            position: absolute;
+            left: 0;
+            font-size: 9px;
+            top: 1px;
+        }
+
+        .top3-card.must .top3-bullets li::before {
+            color: var(--fc-primary);
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--fc-border);
+            padding-top: 20px;
+            margin-top: 40px;
+            font-size: 10px;
+            color: #555;
+            /* Even more muted */
+            text-align: center;
+        }
+
+        .footer-links {
+            margin-top: 8px;
+        }
+
+        .footer-links a {
+            color: #777;
+            text-decoration: none;
+            margin: 0 8px;
+        }
+
+        /* --- PRINT MEDIA QUERY --- */
+        @media print {
+            @page {
+                size: A4;
+                margin: 12mm;
+                /* Minimal margins */
+                background-color: #000000;
+            }
+
+            body {
+                background-color: #000000 !important;
+                color: #FFFFFF !important;
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            .page-container {
+                width: 100%;
+                max-width: none;
+                margin: 0;
+                padding: 0;
+                min-height: auto;
+                border: none;
+            }
+
+            /* Force background colors */
+            .card,
+            .risk-tile,
+            .top3-card,
+            .intro-box,
+            .badge {
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+
+            /* Remove Box Shadows for print clarity if needed, or keep if PDF renderer supports it well */
+            .card,
+            .top3-card.must {
+                box-shadow: none !important;
+                border: 1px solid #333 !important;
+                /* Higher contrast border for print */
+            }
+
+            /* No page breaks inside cards */
+            .card,
+            .section,
+            .risk-tile {
+                page-break-inside: avoid;
+            }
+
+            h1,
+            h2,
+            h3,
+            h4,
+            p,
+            span,
+            div {
+                color-adjust: exact;
+            }
+        }
+    </style>
+    <script>
+        // Check input length and clamp if necessary (simple JS fallback if automation doesn't handle it)
+        window.addEventListener('load', () => {
+            const clampElements = document.querySelectorAll('.clamp-text');
+            clampElements.forEach(el => {
+                if (el.scrollHeight > el.clientHeight) {
+                    // Add ellipsis logic if needed, or rely on CSS line-clamp
+                }
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="page-container">
+
+        <!-- HEADER -->
+        <header>
+            <div class="logo">
+                <svg xmlns="http://www.w3.org/2000/svg" width="160" height="32" viewBox="0 0 250 50" fill="none">
+                    <rect x="0" y="5" width="40" height="40" rx="8" fill="#12C9FF" fill-opacity="0.1" stroke="#12C9FF"
+                        stroke-opacity="0.2" stroke-width="1.5" />
+                    <g transform="translate(10, 14)">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="#12C9FF" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                    </g>
+                    <text x="55" y="32" font-family="'Inter', sans-serif" font-weight="bold" font-size="24"
+                        fill="#FFFFFF" letter-spacing="-0.5">FoundersCover</text>
+                </svg>
+            </div>
+            <div class="header-right">
+                Online-Service der<br>VersiFlex Versicherungsmakler GmbH
+            </div>
+        </header>
+
+        <!-- HERO -->
+        <section id="hero">
+            <span class="badge badge-pink">GRATIS RISIKOANALYSE</span>
+            <h1 class="hero-title">Risikoanalyse für <span style="color: var(--fc-primary);">{{startup_name}}</span>
+            </h1>
+            <div class="hero-subline">Basierend auf eurer Website: {{website_url}}</div>
+
+            <div class="meta-row">
+                <div class="meta-item">
+                    Erstellt am: {{created_date}}
+                </div>
+                <div class="meta-item">
+                    Dauer: wenige Minuten
+                </div>
+            </div>
+        </section>
+
+        <!-- INTRO -->
+        <section class="section">
+            <div class="intro-box">
+                Hallo {{contact_name}}, du hast die kostenlose Risikoanalyse angefragt.
+                Diese Auswertung ist eine grobe Orientierung auf Basis öffentlich verfügbarer Infos
+                (Website/Impressum/Produkttexte).
+                Versicherungsbedarf ist individuell – nutze das als Startpunkt für Priorisierung.
+            </div>
+        </section>
+
+        <!-- SECTION 1: SNAPSHOT -->
+        <section class="section">
+            <div class="card">
+                <div class="snapshot-grid">
+                    <!-- Left: Key Values -->
+                    <div class="key-value-list">
+                        <div class="kv-item"><span class="kv-label">Phase</span> <span
+                                class="kv-value">{{startup_phase}}</span></div>
+                        <div class="kv-item"><span class="kv-label">Modell</span> <span
+                                class="kv-value">{{startup_model}}</span></div>
+                        <div class="kv-item"><span class="kv-label">Go-to-market</span> <span
+                                class="kv-value">{{go_to_market}}</span></div>
+                        <div class="kv-item"><span class="kv-label">Teamgröße</span> <span
+                                class="kv-value">{{team_size}}</span></div>
+                        <div class="kv-item"><span class="kv-label">Enterprise Deals</span> <span
+                                class="kv-value">{{enterprise_deals}}</span></div>
+                    </div>
+                    <!-- Right: Summary -->
+                    <div class="snapshot-summary">
+                        <h3>Kurzprofil</h3>
+                        <p>{{startup_short_summary}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: CANVAS (2x3 Grid) -->
+        <section class="section">
+            <h2 style="font-family: var(--font-display); font-size: 18px; margin-bottom: 16px; color: white;">Euer
+                Risiko-Canvas</h2>
+            <div class="risk-grid">
+                <!-- 1. Haftung -->
+                <div class="risk-tile">
+                    <div class="risk-header">
+                        <span class="risk-title">Haftung & Vertrag</span>
+                        <span class="risk-badge {{risk_1_level_class}}">{{risk_1_level}}</span>
+                    </div>
+                    <ul class="risk-bullets">
+                        {{risk_1_bullets}}
+                    </ul>
+                    <div class="risk-insurance">Passende Lösung: <span>{{risk_1_insurance}}</span></div>
+                </div>
+
+                <!-- 2. Cyber -->
+                <div class="risk-tile">
+                    <div class="risk-header">
+                        <span class="risk-title">Cyber & Daten</span>
+                        <span class="risk-badge {{risk_2_level_class}}">{{risk_2_level}}</span>
+                    </div>
+                    <ul class="risk-bullets">
+                        {{risk_2_bullets}}
+                    </ul>
+                    <div class="risk-insurance">Passende Lösung: <span>{{risk_2_insurance}}</span></div>
+                </div>
+
+                <!-- 3. D&O -->
+                <div class="risk-tile">
+                    <div class="risk-header">
+                        <span class="risk-title">Management (D&O)</span>
+                        <span class="risk-badge {{risk_3_level_class}}">{{risk_3_level}}</span>
+                    </div>
+                    <ul class="risk-bullets">
+                        {{risk_3_bullets}}
+                    </ul>
+                    <div class="risk-insurance">Passende Lösung: <span>{{risk_3_insurance}}</span></div>
+                </div>
+
+                <!-- 4. Betrieb -->
+                <div class="risk-tile">
+                    <div class="risk-header">
+                        <span class="risk-title">Betrieb & Sachwerte</span>
+                        <span class="risk-badge {{risk_4_level_class}}">{{risk_4_level}}</span>
+                    </div>
+                    <ul class="risk-bullets">
+                        {{risk_4_bullets}}
+                    </ul>
+                    <div class="risk-insurance">Passende Lösung: <span>{{risk_4_insurance}}</span></div>
+                </div>
+
+                <!-- 5. Recht -->
+                <div class="risk-tile">
+                    <div class="risk-header">
+                        <span class="risk-title">Recht & Streitfälle</span>
+                        <span class="risk-badge {{risk_5_level_class}}">{{risk_5_level}}</span>
+                    </div>
+                    <ul class="risk-bullets">
+                        {{risk_5_bullets}}
+                    </ul>
+                    <div class="risk-insurance">Passende Lösung: <span>{{risk_5_insurance}}</span></div>
+                </div>
+
+                <!-- 6. Growth -->
+                <div class="risk-tile">
+                    <div class="risk-header">
+                        <span class="risk-title">Wachstum & People</span>
+                        <span class="risk-badge {{risk_6_level_class}}">{{risk_6_level}}</span>
+                    </div>
+                    <ul class="risk-bullets">
+                        {{risk_6_bullets}}
+                    </ul>
+                    <div class="risk-insurance">Passende Lösung: <span>{{risk_6_insurance}}</span></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 3: TOP 3 RECOMMENDATIONS -->
+        <section class="section">
+            <h2 style="font-family: var(--font-display); font-size: 18px; margin-bottom: 16px; color: white;">Empfohlene
+                Priorisierung</h2>
+            <div class="top3-grid">
+                <!-- MUST HAVE -->
+                <div class="top3-card must">
+                    <div class="top3-title text-cyan">Must-have</div>
+                    <ul class="top3-bullets">
+                        {{top3_must}}
+                    </ul>
+                </div>
+                <!-- NICE TO HAVE -->
+                <div class="top3-card">
+                    <div class="top3-title text-white">Nice-to-have</div>
+                    <ul class="top3-bullets">
+                        {{top3_nice}}
+                    </ul>
+                </div>
+                <!-- LATER -->
+                <div class="top3-card">
+                    <div class="top3-title text-muted">Later</div>
+                    <ul class="top3-bullets">
+                        {{top3_later}}
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+            <div class="disclaimer">
+                Hinweis: Grobe Ersteinschätzung, keine Rechtsberatung. Details hängen von Vertrag, Umsatz,
+                Kundenanforderungen und Deckungssummen ab.
+            </div>
+            <div class="footer-links">
+                <a href="https://founderscover.com/impressum">Impressum</a> |
+                <a href="https://founderscover.com/datenschutz">Datenschutz</a>
+            </div>
+        </footer>
+
+    </div>
+</body>
+
+</html>
