@@ -1,6 +1,5 @@
-
 import React, { useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import Termin from './pages/Termin';
 import Leistungen from './pages/Leistungen';
@@ -49,6 +48,18 @@ const SEOManager: React.FC = () => {
     if (metaDesc) {
       metaDesc.setAttribute('content', metaDescriptions[path] || metaDescriptions['/']);
     }
+
+    // Set canonical link for SEO
+    let canonicalLink = document.querySelector('link[rel="canonical"]');
+    if (!canonicalLink) {
+      canonicalLink = document.createElement('link');
+      canonicalLink.setAttribute('rel', 'canonical');
+      document.head.appendChild(canonicalLink);
+    }
+    const baseUrl = 'https://founderscover.de';
+    // Remove trailing slash if present unless it's the home page
+    const cleanPath = path === '/' ? '' : path.replace(/\/$/, '');
+    canonicalLink.setAttribute('href', `${baseUrl}${cleanPath}`);
   }, [location]);
 
   return null;
@@ -60,7 +71,7 @@ const Placeholder: React.FC<{ title: string }> = ({ title }) => (
     <div className="p-8 text-center mt-32">
       <h1 className="text-4xl font-display font-bold text-primary mb-4">{title}</h1>
       <p className="text-slate-400 mb-8 italic">Diese Seite ist aktuell noch in Arbeit – der Risiko-Check ist jedoch bereits live!</p>
-      <a href="#/termin" className="bg-primary text-black px-8 py-3 rounded-full font-bold">Direkt zum Risiko-Check</a>
+      <a href="/termin" className="bg-primary text-black px-8 py-3 rounded-full font-bold">Direkt zum Risiko-Check</a>
     </div>
   </div>
 );

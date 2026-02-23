@@ -75,8 +75,8 @@ export const PHASES_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/do-management">D&O für Gründer</a></li>
-        <li><a href="#/wissen/vermoegensschadenhaftpflicht">IT-Haftpflicht</a></li>
+        <li><a href="/wissen/do-management">D&O für Gründer</a></li>
+        <li><a href="/wissen/vermoegensschadenhaftpflicht">IT-Haftpflicht</a></li>
       </ul>
     `,
     seo: {
@@ -151,8 +151,8 @@ export const PHASES_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/do-management">D&O Deep Dive</a></li>
-        <li><a href="#/wissen/mitarbeiterbindung">Mitarbeiterbindung durch Benefits</a></li>
+        <li><a href="/wissen/do-management">D&O Deep Dive</a></li>
+        <li><a href="/wissen/mitarbeiterbindung">Mitarbeiterbindung durch Benefits</a></li>
       </ul>
     `,
     seo: {
@@ -228,8 +228,8 @@ export const PHASES_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/versicherungsnachweis-coi">Der perfekte COI</a></li>
-        <li><a href="#/wissen/haftung-vertraege">Vertragshaftung</a></li>
+        <li><a href="/wissen/versicherungsnachweis-coi">Der perfekte COI</a></li>
+        <li><a href="/wissen/haftung-vertraege">Vertragshaftung</a></li>
       </ul>
     `,
     seo: {
@@ -304,8 +304,8 @@ export const PHASES_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/produkthaftung-betriebshaftpflicht">Produkthaftung</a></li>
-        <li><a href="#/wissen/b2b-sales-enterprise">Enterprise Sales</a></li>
+        <li><a href="/wissen/produkthaftung-betriebshaftpflicht">Produkthaftung</a></li>
+        <li><a href="/wissen/b2b-sales-enterprise">Enterprise Sales</a></li>
       </ul>
     `,
     seo: {
@@ -378,8 +378,8 @@ export const PHASES_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/exit-due-diligence">Exit & Due Diligence</a></li>
-        <li><a href="#/wissen/internationalisierung">Internationalisierung</a></li>
+        <li><a href="/wissen/exit-due-diligence">Exit & Due Diligence</a></li>
+        <li><a href="/wissen/internationalisierung">Internationalisierung</a></li>
       </ul>
     `,
     seo: {
@@ -455,8 +455,8 @@ export const PHASES_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/series-a-hiring">Series A & D&O</a></li>
-        <li><a href="#/wissen/haftung-vertraege">Haftung</a></li>
+        <li><a href="/wissen/series-a-hiring">Series A & D&O</a></li>
+        <li><a href="/wissen/haftung-vertraege">Haftung</a></li>
       </ul>
     `,
     seo: {

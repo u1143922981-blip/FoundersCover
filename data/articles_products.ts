@@ -70,8 +70,8 @@ export const PRODUCTS_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/vermoegensschadenhaftpflicht">Vermögensschadenhaftpflicht (IT)</a></li>
-        <li><a href="#/wissen/produkthaftung-betriebshaftpflicht">Produkthaftung</a></li>
+        <li><a href="/wissen/vermoegensschadenhaftpflicht">Vermögensschadenhaftpflicht (IT)</a></li>
+        <li><a href="/wissen/produkthaftung-betriebshaftpflicht">Produkthaftung</a></li>
       </ul>
     `,
     seo: {
@@ -148,8 +148,8 @@ export const PRODUCTS_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/haftung-vertraege">Vertragshaftung</a></li>
-        <li><a href="#/wissen/subunternehmer-freelancer">Subunternehmer</a></li>
+        <li><a href="/wissen/haftung-vertraege">Vertragshaftung</a></li>
+        <li><a href="/wissen/subunternehmer-freelancer">Subunternehmer</a></li>
       </ul>
     `,
     seo: {
@@ -225,8 +225,8 @@ export const PRODUCTS_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/cyber-datenschutz">Cyber & Datenschutz Basics</a></li>
-        <li><a href="#/wissen/vermoegensschadenhaftpflicht">IT-Haftpflicht</a></li>
+        <li><a href="/wissen/cyber-datenschutz">Cyber & Datenschutz Basics</a></li>
+        <li><a href="/wissen/vermoegensschadenhaftpflicht">IT-Haftpflicht</a></li>
       </ul>
     `,
     seo: {
@@ -301,8 +301,8 @@ export const PRODUCTS_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/series-a-hiring">Series A & D&O</a></li>
-        <li><a href="#/wissen/rechtsschutz-startups">Rechtsschutz</a></li>
+        <li><a href="/wissen/series-a-hiring">Series A & D&O</a></li>
+        <li><a href="/wissen/rechtsschutz-startups">Rechtsschutz</a></li>
       </ul>
     `,
     seo: {
@@ -378,8 +378,8 @@ export const PRODUCTS_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/rechtsschutz-alltag">Rechtsschutz im Alltag</a></li>
-        <li><a href="#/wissen/do-management">D&O</a></li>
+        <li><a href="/wissen/rechtsschutz-alltag">Rechtsschutz im Alltag</a></li>
+        <li><a href="/wissen/do-management">D&O</a></li>
       </ul>
     `,
     seo: {
@@ -453,8 +453,8 @@ export const PRODUCTS_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/series-a-hiring">Hiring & Series A</a></li>
-        <li><a href="#/wissen/rechtsschutz-alltag">Rechtsschutz</a></li>
+        <li><a href="/wissen/series-a-hiring">Hiring & Series A</a></li>
+        <li><a href="/wissen/rechtsschutz-alltag">Rechtsschutz</a></li>
       </ul>
     `,
     seo: {

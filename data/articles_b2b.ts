@@ -73,8 +73,8 @@ export const B2B_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/haftung-vertraege">Haftung in Verträgen</a></li>
-        <li><a href="#/wissen/b2b-sales-enterprise">B2B-Sales & Enterprise-Kunden</a></li>
+        <li><a href="/wissen/haftung-vertraege">Haftung in Verträgen</a></li>
+        <li><a href="/wissen/b2b-sales-enterprise">B2B-Sales & Enterprise-Kunden</a></li>
       </ul>
     `,
     seo: {
@@ -148,8 +148,8 @@ export const B2B_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/versicherungsnachweis-coi">Versicherungsnachweis (COI)</a></li>
-        <li><a href="#/wissen/vermoegensschadenhaftpflicht">Vermögensschadenhaftpflicht (IT/PI)</a></li>
+        <li><a href="/wissen/versicherungsnachweis-coi">Versicherungsnachweis (COI)</a></li>
+        <li><a href="/wissen/vermoegensschadenhaftpflicht">Vermögensschadenhaftpflicht (IT/PI)</a></li>
       </ul>
     `,
     seo: {
@@ -223,8 +223,8 @@ export const B2B_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/haftung-vertraege">Haftung in Verträgen</a></li>
-        <li><a href="#/wissen/vermoegensschadenhaftpflicht">Vermögensschadenhaftpflicht (IT/PI)</a></li>
+        <li><a href="/wissen/haftung-vertraege">Haftung in Verträgen</a></li>
+        <li><a href="/wissen/vermoegensschadenhaftpflicht">Vermögensschadenhaftpflicht (IT/PI)</a></li>
       </ul>
     `,
     seo: {
@@ -298,8 +298,8 @@ export const B2B_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/betriebshaftpflicht-startups">Betriebshaftpflicht erklärt</a></li>
-        <li><a href="#/wissen/vermoegensschadenhaftpflicht">Vermögensschadenhaftpflicht</a></li>
+        <li><a href="/wissen/betriebshaftpflicht-startups">Betriebshaftpflicht erklärt</a></li>
+        <li><a href="/wissen/vermoegensschadenhaftpflicht">Vermögensschadenhaftpflicht</a></li>
       </ul>
     `,
     seo: {
@@ -374,8 +374,8 @@ export const B2B_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/cyberversicherung">Cyberversicherung Deep Dive</a></li>
-        <li><a href="#/wissen/vermoegensschadenhaftpflicht">IT-Haftpflicht</a></li>
+        <li><a href="/wissen/cyberversicherung">Cyberversicherung Deep Dive</a></li>
+        <li><a href="/wissen/vermoegensschadenhaftpflicht">IT-Haftpflicht</a></li>
       </ul>
     `,
     seo: {
@@ -449,8 +449,8 @@ export const B2B_ARTICLES: Article[] = [
 
       <h2>Passende Guides</h2>
       <ul>
-        <li><a href="#/wissen/rechtsschutz-startups">Rechtsschutz Deep Dive</a></li>
-        <li><a href="#/wissen/do-management">D&O (Schutz für Organe)</a></li>
+        <li><a href="/wissen/rechtsschutz-startups">Rechtsschutz Deep Dive</a></li>
+        <li><a href="/wissen/do-management">D&O (Schutz für Organe)</a></li>
       </ul>
     `,
     seo: {
