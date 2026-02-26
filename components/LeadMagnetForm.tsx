@@ -25,7 +25,7 @@ export const LeadMagnetForm: React.FC = () => {
 
         try {
             // Send data to n8n Webhook
-            const response = await fetch('https://n8n.srv985631.hstgr.cloud/webhook-test/founderscover-risk-analysis', {
+            const response = await fetch('https://n8n.srv1432644.hstgr.cloud/webhook/founderscover-risk-analysis', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
