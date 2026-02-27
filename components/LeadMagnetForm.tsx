@@ -34,7 +34,7 @@ export const LeadMagnetForm: React.FC = () => {
             });
 
             if (response.ok) {
-                alert('Vielen Dank! Deine Daten wurden übermittelt. Die Analyse kommt per E-Mail.');
+                alert('Vielen Dank! Die Risikoanalyse kommt in den nächsten 2–3 Minuten in deinem Postfach an. Bitte prüfe auch deinen Spam-Ordner.');
                 setFormData({ name: '', email: '', url: '' }); // Reset form
             } else {
                 console.error('Webhook Error:', response.statusText);
