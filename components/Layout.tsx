@@ -139,7 +139,7 @@ export const Footer: React.FC = () => {
 
 export const MobileStickyCTA: React.FC = () => {
   return (
-    <div className="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] z-40">
+    <div className="hidden fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-3rem)] z-40">
       <a
         href="https://outlook.office.com/book/Lassunssprechen@versiflex.de/"
         target="_blank"
